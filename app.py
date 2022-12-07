@@ -1,11 +1,12 @@
 import streamlit as st
 from fastai.vision.all import *
-# import pathlib
+import pathlib
 import plotly.express as px
+import platform
 
 # repair error
-# temp = pathlib.PosixPath
-# pathlib.PosixPath = pathlib.WindowsPath
+plt = platform.system()
+if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 
 # title
 st.title('Classification Model')
