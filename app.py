@@ -11,6 +11,8 @@ if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 # title
 st.title('Classification Model')
 
+st.header('Predictons: Person | Book | Fruit')
+
 # input image
 file = st.file_uploader('Rasm yuklash', type=['png','jpeg','jpg','jfif','svg'])
 if file:
