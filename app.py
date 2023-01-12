@@ -1,5 +1,6 @@
 import streamlit as st
 from fastai.vision.all import *
+import pandas as pd
 import pathlib
 import plotly.express as px
 import platform
@@ -30,5 +31,5 @@ if file:
     st.info(f'Probability: {probs[pred_id]*100:.1f}%')
 
     # plotting
-    fig = px.bar(probs*100, model.dls.vocab, x="prediction", y="class")
+    fig = px.bar(pd.DataFrame(probs*100, model.dls.vocab), x="prediction", y="class")
     st.plotly_chart(fig)
