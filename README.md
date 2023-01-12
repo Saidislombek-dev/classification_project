@@ -1,4 +1,4 @@
-# Human, fruit and book > cassification with fast.ai
+# Human, fruit and book > classification with fast.ai
 
 ## Link to streamlit: https://saidislombek-dev-classification-project-app-ol4xfr.streamlit.app
 
