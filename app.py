@@ -30,5 +30,5 @@ if file:
     st.info(f'Ehtimollik: {probs[pred_id]*100:.1f}%')
 
     # plotting
-    fig = px.bar(x=probs*100, y=model.dls.vocab)
+    fig = px.bar("class"=probs*100, "prediction"=model.dls.vocab)
     st.plotly_chart(fig)
