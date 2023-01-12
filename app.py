@@ -30,5 +30,7 @@ if file:
     st.info(f'Probability: {probs[pred_id]*100:.1f}%')
 
     # plotting
-    fig = px.bar("prediction"=probs*100, "class"=model.dls.vocab)
+    fig = px.bar(x=probs*100, y=model.dls.vocab)
+    px.xlabel("prediction")
+    px.ylabel("class")
     st.plotly_chart(fig)
