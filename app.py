@@ -11,10 +11,10 @@ if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 # title
 st.title('Classification Model')
 
-st.header('Predictons: Person | Book | Fruit')
+st.header('Classes: Person | Book | Fruit')
 
 # input image
-file = st.file_uploader('Rasm yuklash', type=['png','jpeg','jpg','jfif','svg'])
+file = st.file_uploader('Upload image', type=['png','jpeg','jpg','jfif','svg'])
 if file:
     st.image(file)
 
@@ -26,8 +26,8 @@ if file:
     # predict
     pred, pred_id, probs = model.predict(img)
 
-    st.success(f'Bashorat: {pred}')
-    st.info(f'Ehtimollik: {probs[pred_id]*100:.1f}%')
+    st.success(f'Predicted: {pred}')
+    st.info(f'Probability: {probs[pred_id]*100:.1f}%')
 
     # plotting
     fig = px.bar("prediction"=probs*100, "class"=model.dls.vocab)
