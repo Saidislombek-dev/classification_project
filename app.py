@@ -21,7 +21,7 @@ if file:
     img = PILImage.create(file)
 
     # read model
-    model = load_learner('different_model.pkl')
+    model = load_learner('different_mode.pkl')
 
     # predict
     pred, pred_id, probs = model.predict(img)
