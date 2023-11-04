@@ -4,7 +4,9 @@ import pathlib
 import plotly.express as px
 import platform
 
-
+# repair error
+plt = platform.system()
+if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 
 # title
 st.title('Classification Model')
